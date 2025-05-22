@@ -7,7 +7,7 @@ editor: visual
 
 # [***Titanic Disaster***]{.underline}
 
-In this section we load the **Titanic** dataset which contains the **survival data** of passengers from the **Titanic disaster**. It **summarizes** the counts of **passengers** based on **class**, **age**, **sex** and **survival status**.
+In this section we load the **Titanic** dataset which contains the **survival data** of passengers from the **Titanic disaster**. It **summarizes** the counts of **passengers** based on **class**, **age**, **sex** and **survival status**. Lets see the **preview** of the data.
 
 ```{r}
 #| echo: false
@@ -21,7 +21,7 @@ data = as.data.frame(Titanic)
 head(data)
 ```
 
-We can see the top 6 values of our data above. Now we will see the structure.
+We can see **top 6 values** of our data above. The data has **5 variables**. Now we will see the structure.
 
 ```{r}
 #| echo: false
