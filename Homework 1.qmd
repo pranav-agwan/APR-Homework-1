@@ -13,11 +13,15 @@ In this section we load the **Titanic** dataset which contains the **survival da
 #| echo: false
 # Loading the dataset
 data("Titanic")
+
+# Converting the dataset to a dataframe
 data = as.data.frame(Titanic)
+
+# Displaying the top 6 values of the dataset
 head(data)
 ```
 
-In this data we have the following structure.
+We can see the top 6 values of our data above. Now we will see the structure.
 
 ```{r}
 #| echo: false
@@ -25,7 +29,7 @@ In this data we have the following structure.
 str(data)
 ```
 
-There are total **32 observations** of **5 variables** in the **Titanic dataset.** The variables areas follows:
+There are total **32 observations** of **5 variables** in the **Titanic dataset.** The variables are as follows:
 
 -   [***Class***]{.underline} - It shows the **passenger class**. It is a **factor variable** with 4 levels: **"1st"**, **"2nd"**, **"3rd"** and **"Crew"**.
 
