@@ -1,0 +1,67 @@
+---
+title: "Advanced Programming with R - Homework 1"
+author: "Pranav Agwan, Student No - 24219261"
+format: pdf
+editor: visual
+---
+
+# [***Titanic Disaster***]{.underline}
+
+In this section we load the **Titanic** dataset which contains the **survival data** of passengers from the **Titanic disaster**. It **summarizes** the counts of **passengers** based on **class**, **age**, **sex** and **survival status**.
+
+```{r}
+#| echo: false
+# Loading the dataset
+data("Titanic")
+data = as.data.frame(Titanic)
+```
+
+In this data we have the following structure.
+
+```{r}
+#| echo: false
+# Checking the structure of the dataset
+str(data)
+```
+
+There are total **32 observations** of **5 variables** in the **Titanic dataset.** The variables areas follows:
+
+-   [***Class***]{.underline} - It shows the **passenger class**. It is a **factor variable** with 4 levels: **"1st"**, **"2nd"**, **"3rd"** and **"Crew"**.
+
+-   [***Sex***]{.underline} - It shows **passenger's sex**. It is also a **factor variable** with 2 levels: **"Male"** and **"Female"**.
+
+-   [***Age***]{.underline} - It shows the **age group** of the **passenger**. It is also a **factor variable** with 2 levels: **"Child"** and **"Adult"**.
+
+-   [***Survived***]{.underline} - It shows the **survival status** of the **passenger**. It is also a **factor variable** with 2 levels: **"Yes"** and **"No"**.
+
+-   [***Freq***]{.underline} - It shows the **count** of the **passengers** that fall into the specific groups mentioned above. It is a **numeric variable**.
+
+We will now show a simple **bar plot** which displays the **numbe**r of **male** and **female** passengers who **survived** or **did** **not survived** the incident. We will use the **Sex**, **Survived** and **Freq** column for the plot.
+
+```{r}
+#| echo: false
+# Loading the required library
+library(ggplot2)
+
+# Aggregating the number of survivals based on sex
+survival = aggregate(Freq ~ Sex + Survived, data = data, sum)
+
+# Plotting the graph
+ggplot(survival, aes(x = Sex, y = Freq, fill = Survived)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  labs(title = "Titanic Survival by Sex",
+       x = "Sex",
+       y = "Passenger Count") +
+  theme_minimal() +
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
+The **red bar** shows the passenger which **did not survived** the incident and the **blue bar** shows the **passenger** which survived. There are **2 bars** both for "**Male"** and **"Female"**. From the above graph we can interpret the following:
+
+-   There are aprrox **1350-1400 males** which **did not survived** the incident.
+
+-   There are approx **350-400 males** which **survived** the incident.
+
+-   There are approx **100-150 females** which **did not survived** the incident.
+
+-   There are approx **350-400 females** which **survived** the incident.
