@@ -14,6 +14,7 @@ In this section we load the **Titanic** dataset which contains the **survival da
 # Loading the dataset
 data("Titanic")
 data = as.data.frame(Titanic)
+head(data)
 ```
 
 In this data we have the following structure.
