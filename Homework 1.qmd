@@ -21,7 +21,7 @@ data = as.data.frame(Titanic)
 head(data)
 ```
 
-We can see **top 6 values** of our data above. The data has **5 variables**. Now we will see the structure.
+We can see **top 6 values** of our data with **5 variables**. Now we will see the structure.
 
 ```{r}
 #| echo: false
