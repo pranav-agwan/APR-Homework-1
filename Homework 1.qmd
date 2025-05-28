@@ -61,7 +61,7 @@ ggplot(survival, aes(x = Sex, y = Freq, fill = Survived)) +
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-The **red bar** shows the passenger which **did not survived** the incident and the **blue bar** shows the **passenger** which survived. There are **2 bars** both for "**Male"** and **"Female"**. From the above graph we can interpret the following:
+The **red bar** shows the passenger which **did not survived** the incident and the **blue bar** shows the **passenger** which **survived**. There are **2 bars** both for "**Male"** and **"Female"**. From the above graph we can **interpret** the following:
 
 -   There are aprrox **1350-1400 males** which **did not survived** the incident.
 
