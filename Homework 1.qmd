@@ -41,6 +41,8 @@ There are total **32 observations** of **5 variables** in the **Titanic dataset.
 
 -   [***Freq***]{.underline} - It shows the **count** of the **passengers** that fall into the specific groups mentioned above. It is a **numeric variable**.
 
+## [*Graphical Analysis of Survival of Passengers*]{.underline}
+
 We will now show a simple **bar plot** which displays the **numbe**r of **male** and **female** passengers who **survived** or **did** **not survived** the incident. We will use the **Sex**, **Survived** and **Freq** column for the plot.
 
 ```{r}
